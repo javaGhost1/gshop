@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    
+
+
+
+<div class="categories">
+    <div class="small-container">
+        <div class="row">
+            {% for product in laptops %}
+            <div class="col-3"> 
+                    <img src="{% if product.image %}{{product.image.url}}{% else %}{% static 'image/noimg.png'%}{% endif %}">
+                    <h4>{{product.name}}</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>  
+                    <p>Ksh.{{product.price}}</p>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="small-container">
+    <h2>Featured Products</h2>
+    <div class="row">
+        {% for product in speakers %}
+        <div class="col-4">
+            <img src="{% if product.image %}{{product.image.url}}{% else %}{% static 'image/noimg.png'%}{% endif %}">
+            <h4>{{product.name}}</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
+            <p>{{product.price}}</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

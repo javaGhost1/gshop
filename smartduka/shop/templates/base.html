@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <script src="https://kit.fontawesome.com/a66b1c59ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+    <title>{% block title %}G shop{% endblock title %}</title>
+</head>
+<body>
+    <div class="header">    
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.jpg" alt="logo" height="40px" width="50px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Management</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.jpg" alt="cart" width="30px" height="30px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Get Your Items <br> in Style!</h1>
+                <p>Getting the best electronic devices is not always easy.
+                    At G-Mall, <br> we sell you the best Electronic Devices in 
+                    the Country.
+                </p>
+                <a href="" class="btn">View More Items   &#8594</a>
+            </div>
+            <div class="col-2">
+                {% comment %} <img src="images/Top.jpg" alt="PC User"> {% endcomment %}
+            </div>
+        </div>
+    </div>
+        {% block content %}
+        {% endblock %}
+  
+</body>
+</html>
